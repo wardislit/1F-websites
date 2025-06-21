@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Subscribe Now!</title>
+    <link rel="stylesheet" href="subscription.css">
+    <script src="subscription.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1>SUBSCRIPTION</h1>
+    </header>
+    <body>
+        <div class="fit-ignite">
+            <br>
+            <img class="beside-text" id="fi-icon" src="fit-ignite-fball.png" alt="fireball icon">
+            <h2 id="fit">FIT</h2>
+            <div class="beside-text">
+                <h2 id="ignite">IGNITE</h2>
+                <h2 class="beside-text" id="plusplus">++</h2>
+            </div>    
+        </div>
+        <div class="laptop-rat">
+            <img id="gym-rat-image" src="gymrat.jpg" alt="squirrel lifting">
+            <img id="laptop-image" src="laptop.png" alt="laptop">
+        </div>
+        <div class="pass-button">
+            <button id="trial-pass-button" onclick="togglePanel()"><b>GET FREE TRIAL PASS!</b></button>
+            <div class="panel" id="panel">
+                <h3 id="pass-desc">FIT IGNITE++ GIVES YOU SPECIAL PASS THAT INCLUDES:</h3>
+                <p>
+                    • Unlimited access to gym equipment<br>
+                    • Group fitness classes (Yoga, HIIT, Zumba, etc.)<br>
+                    • Locker and shower facilities<br>
+                    • Early morning & late night access<br>
+                    • Access to all gym amenities
+                </p>
+                <button id="trial-pass-button" style="width: 8vw; height: 2.5vw; font-size: 1.25vw; font-style: normal;" onclick="togglePayPanel()">Continue</button>
+            </div>
+            <div class="payment-panel" id="payment-panel">
+                <button style="background: none; font-family: Luckiest Guy; font-size: 2vw; float: right;" onclick="togglePayPanel()"><b>X</b></button>
+
+                <form method="get">
+                    <legend style="font-size: 2vw;text-align: center;">PAYMENT SECTION</legend>
+                    <fieldset>
+                    <h3 id="pass-desc" style="text-align: left;">SUBSCRIPTION OPTIONS:</h3>
+                    <input type="radio" id="mon-plan" name="sub-plan" value="month-plan">
+                    <label for="mon-plan">Monthly Plan - PhpXX/month, cancel anytime</label><br>
+                    <input type="radio" id="quart-plan" name="sub-plan" value="quarter-plan">
+                    <label for="quart-plan">Quarterly Plan - PhpXX/every 3 months, save X%</label><br>
+                    <input type="radio" id="year-plan" name="sub-plan" value="year-plan">
+                    <label for="year-plan">Monthly Plan - PhpXX/year, (best-value - save X% off!)</label>
+                    </fieldset>
+                    <fieldset>
+                    <h3 id="pass-desc" style="text-align: left;">FORM OF PAYMENT:</h3>
+                    <input type="radio" id="gcash" name="pay-method" value="gcash">
+                    <label for="gcash"><img id="pay-image" src="gcash.jpg"></label><br>
+                    <input type="radio" id="gpay" name="pay-method" value="gpay">
+                    <label for="gpay"><img id="pay-image" src="google-pay-icon-old.jpg"></label><br>                    
+                    <input type="radio" id="other-card" name="pay-method" value="other-card">
+                    <label for="other-card">Credit & Debit Cards (VISA, MASTERCARD, etc.)</label><br>
+                    <input type="radio" id="appoint-pay" name="pay-method" value="appoint-pay">
+                    <label for="appoint-pay">In-Person Payments (set an appointment for payment)</label><br>
+                    <input type="radio" id="auto-pay" name="pay-method" value="auto-pay">
+                    <label for="appoint-pay">AutoPay™</label>
+                    </fieldset>
+                    <div class="center">
+                        <button type="button" id="trial-pass-button" style="width:13vw; height: 3vw; font-size: 1.25vw; margin-top: 2vw; font-style: normal;" onclick="successPayPanel()"><b>Submit Payment</b></button>
+                    </div>
+                </form>
+            </div>
+            <div id="success-panel" class="success-panel">
+                <h2>Payment Success!</h2>
+                <p>Returning in 2 seconds...</p>
+            </div>
+        </div>
+    </body>
+</body>
+</html>

@@ -1,0 +1,229 @@
+* {
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Luckiest Guy', cursive, "Anton";
+    background-image: linear-gradient(to bottom,rgb(247, 147, 1)0%, rgb(247, 147, 1)33.3%,
+    rgb(170,18,17)33.3%, rgb(170,18,17)66.7%, rgb(247, 147, 1)66.7%, rgb(247, 147, 1)100%);
+    min-height: 100vh;
+}
+
+.beside-text {
+    position: relative;
+    top: -2.5vw;
+    left: 10vw;
+    line-height: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 4vw;
+}
+
+@keyframes vanish {
+    0% { opacity: 1; }
+    49% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+h1 {
+    text-align: center;
+    font-size: 80px;
+    color: rgb(254, 208, 0);
+    animation: vanish 1s infinite;
+}
+
+.fit-ignite {
+    display: inline;
+    position: relative;
+    background-color: black;
+    left: 35vw;
+    width: 21vw;
+    height: 7vw;
+    float: left;
+    border-radius: 10px;
+}
+
+#fit {
+    color: red; 
+    text-indent: 60%; 
+    line-height: 0vw;
+    font-size: 2.3vw;
+    margin-top: 0.7vw;
+}
+
+@keyframes igniteGlow {
+    0% { text-shadow: 0.1vw 0.1vw 1vw rgb(254, 97, 0); opacity: 1;}
+    50% { text-shadow: 0.1vw 0.1vw 0.5vw rgb(254, 208, 0); opacity: 0.5;} 
+    100% { text-shadow: 0.1vw 0.1vw 1vw rgb(254, 97, 0); opacity: 1;}
+}
+
+#ignite {
+    color: white; 
+    left: 5vw;
+    line-height: 0.1vw;
+    font-size: 3vw;
+    animation: igniteGlow 1s infinite;
+}
+
+#fi-icon {
+    position: absolute; 
+    left: 2vw; 
+    top: -1.5vw; 
+    float: left; 
+    margin: 0, 15px, 15px, 0;
+    width: 10vw;
+    height: 10.25vw;
+
+}
+
+#plusplus {
+    color: white;
+    font-size: 6vw;
+    margin: 0.5vw;
+    line-height: 6vw;
+    left: -1vw;
+}
+
+#laptop-image {
+    position: absolute;
+    top: 20vw;
+    left:28vw;
+    width: 45vw;
+    z-index: 0;
+}
+
+#gym-rat-image {
+    position: absolute;
+    top: 27.35vw;
+    left:38.2vw;
+    width:23.58vw;
+    height: 14.75vw;
+    z-index: 1;
+}
+
+.pass-button {
+    position: absolute;
+    top: 50vw;
+    left: 40vw;
+}
+
+#trial-pass-button {
+    background-color: rgb(254, 208, 0);   
+    width: 20vw;
+    height: 5vw;
+    border: 0.1vw solid black;
+    border-radius: 10vw;
+    font-family: "Anton";
+    letter-spacing: 0.1vw;
+    font-size: 1.7vw;
+    font-style: italic;
+    margin-bottom: 3vw;
+}
+
+@keyframes blinkColor {
+    0% { background-color: black; color: rgb(254, 208, 0); opacity: 1;}
+    50% { background-color: rgb(254, 208, 0); color: black; opacity: 0.5;} 
+    100% { background-color: black; color: rgb(254, 208, 0); opacity: 1; }
+}
+
+#trial-pass-button:hover {
+    animation: blinkColor  0.5s infinite;
+}
+
+.panel {
+    position: absolute;
+    top: -25vw; 
+    width: 30vw;
+    left: -5vw;
+    height: 20vw;
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+    z-index: 10;
+    padding: 1.25vw;
+}
+
+.panel.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+#pass-desc {
+    text-align: center;
+    font-family: "Anton";
+    letter-spacing: 0.05vw;
+}
+
+.payment-panel {
+    position: absolute;
+    top: -40vw; 
+    width: 60vw;
+    left: -20vw;
+    height: 40vw;
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+    z-index: 11;
+    padding: 1.25vw;
+}
+
+.payment-panel.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#mon-plan, #quart-plan, #year-plan {
+    margin-bottom: 0.7vw;
+}
+
+label {
+    font-family: "Anton";
+    letter-spacing: 0.05vw;
+    font-weight: 100;
+}
+
+#pay-image {
+    width: 5vw;
+    height: 3vw;
+    border-radius: 10px;
+    border-top: 0.5vw;
+}
+
+.center {
+    position: relative;
+    text-align: center;
+}
+
+.success-panel {
+    position: absolute;
+    top: -25vw; 
+    width: 30vw;
+    left: -5vw;
+    height: 20vw;
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+    z-index: 10;
+    padding: 1.25vw;
+}
+
+.success-panel.show {
+    opacity: 1;
+    pointer-events: auto;
+}
