@@ -1,0 +1,41 @@
+* {
+    background-color: black;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.webtitle {
+    color: red;
+    justify-content: flex-start;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    padding: 10px;
+}
+
+.active {
+    text-decoration: underline;
+    color: #72126c;
+    border: none;
+    font-size: 25px;
+}
+
+.hover {
+    color: #ffffff;
+    border: none;
+    font-size: 25px;
+    transition: color 0.5s;
+}
+
+.hover:hover {
+    color: #72126c;
+    text-decoration: underline;
+}
